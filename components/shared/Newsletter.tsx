@@ -5,7 +5,7 @@ import React, { useRef, useState } from "react";
 
 const Newsletter = () => {
   const [emailMessage, setEmailMessage] = useState("");
-  const enteredEmail = useRef();
+  const enteredEmail = useRef<HTMLInputElement>(null);
 
   const handleClick = (e: React.FormEvent) => {
     e.preventDefault();
@@ -13,7 +13,7 @@ const Newsletter = () => {
     setEmailMessage("Email listesine eklendiniz. Teşekkür ederiz.");
     sendEmailW();
     setTimeout(() => {
-      `${(enteredEmail.current.value = "")}`;
+      `${(enteredEmail.current!.value = "")}`;
       setEmailMessage("");
     }, 5000);
   };
