@@ -11,7 +11,7 @@ const Newsletter = () => {
     e.preventDefault();
 
     setEmailMessage("Email listesine eklendiniz. Teşekkür ederiz.");
-    sendEmailW();
+    //sendEmailW();
     setTimeout(() => {
       `${(enteredEmail.current!.value = "")}`;
       setEmailMessage("");
