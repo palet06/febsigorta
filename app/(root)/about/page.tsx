@@ -1,9 +1,8 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
+
 import Image from "next/image";
 import React from "react";
 import image from "@/public/assets/images/about2.jpg";
-import { faCheckSquare } from "@fortawesome/free-regular-svg-icons";
+
 
 
 const page = () => {
@@ -34,10 +33,7 @@ const page = () => {
                 <div className="">
                   <div className="flex mb-5">
                     <div className="text-[#ff5100] text-[14px]">
-                      <FontAwesomeIcon
-                        className="bg-primaryFeb"
-                        icon={faCheckSquare}
-                      />
+                     
                       <i className="fa-check-square"></i>
                     </div>
                     <div className="ps-4">
