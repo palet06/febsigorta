@@ -1,37 +1,16 @@
-"use server"
-import nodemailer from  'nodemailer'
+"use server";
+import nodemailer from "nodemailer";
 
-const transporter = nodemailer.createTransport({  
-  pool:true,
+const transporter = nodemailer.createTransport({
+  pool: true,
   host: "smtp.hostinger.com",
-  port: 465,  
+  port: 465,
   auth: {
     user: "info@febsigorta.com.tr",
-    pass: "Bar123456*"
+    pass: process.env.HOST_MAIL_P,
   },
-  maxConnections:1
+  maxConnections: 1,
 });
-
-// const transporter = nodemailer.createTransport({
-//   pool:true,
-//   service:"smtp.hostinger.com",
-//   port:2525,
-//   auth: {
-//     user:"info@febsigorta.com.tr",
-//     pass:"Bar123456*",
-//   },
-//   maxConnections:1
-// })
-
-
-
-
-
-
-
-
-
-
 
 // async..await is not allowed in global scope, must use a wrapper
 export async function sendEmailW() {
