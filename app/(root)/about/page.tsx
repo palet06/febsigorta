@@ -5,6 +5,7 @@ import React from "react";
 import image from "@/public/assets/images/about2.jpg";
 import { faCheckSquare } from "@fortawesome/free-regular-svg-icons";
 
+
 const page = () => {
   return (
     <>
